@@ -1,4 +1,5 @@
 # Исторические даты
+[Смотреть сборку](https://gor-dey.github.io/historical-dates-build/)
 
 ## Созданы: 
 
@@ -16,6 +17,7 @@ React, Typestript, Styled-Components, Webpack, Swiper, GSAP, MobX, React-Respons
 ---
 
 # Historical dates
+[Смотреть сборку](https://gor-dey.github.io/historical-dates-build/)
 
 ## Created: 
 
