@@ -9,8 +9,9 @@ type FishTextType = {
   year: number
   text: string[]
 }
+export type ThemeDataType = { id: DotType; title: string }
 
-export const themeData: { id: DotType; title: string }[] = [
+export const themeData: ThemeDataType[] = [
   { id: 0, title: 'Скульптура' },
   { id: 1, title: 'Спорт' },
   { id: 2, title: 'Музыка' },

@@ -1,5 +1,5 @@
 import { BigInts } from '@/shared/components'
-import { RingWidget } from '@/widgets/RingWidget'
+import { RingWidget } from '@/widgets'
 import styled from 'styled-components'
 
 export const Div = styled.div`

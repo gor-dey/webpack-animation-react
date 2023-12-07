@@ -18,6 +18,11 @@ const Button = styled.button`
   &:active {
     background-color: #ffff;
   }
+
+  @media (max-width: 768px) {
+    width: 25px;
+    height: 25px;
+  }
 `
 
 type Props = {

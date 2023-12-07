@@ -6,11 +6,17 @@ class RootStore {
   clickedDot: DotType = 0
   yearIndex: DotType = 0
 
-  bigIntsNew = {
+  bigIntsNew: {
+    from: number
+    to: number
+  } = {
     from: yearIndex[0],
     to: yearIndex[0] + 6
   }
-  bigIntsOld = {
+  bigIntsOld: {
+    left: number
+    right: number
+  } = {
     left: 1995,
     right: 2002
   }
@@ -26,28 +32,29 @@ class RootStore {
     )
   }
 
-  setClickedDot = (dot: DotType) => {
+  setClickedDot = (dot: DotType): void => {
     this.clickedDot = dot
   }
 
-  setIndexIncrement = () => {
-    if (this.yearIndex === 5) return
+  setIndexIncrement = (): void => {
+    if (this.yearIndex === yearIndex.length - 1) return
     this.yearIndex = (this.yearIndex + 1) as DotType
   }
 
-  setIndexDecrement = () => {
+  setIndexDecrement = (): void => {
     if (this.yearIndex === 0) return
     this.yearIndex = (this.yearIndex - 1) as DotType
   }
 
-  setBigIntsNew = () => {
+  setBigIntsNew = (): void => {
     const indexValue: DotType = yearIndex[this.yearIndex] as DotType
 
     if (indexValue !== undefined) {
-      this.bigIntsNew = {
+      const newBigInts = {
         from: indexValue,
         to: indexValue + 6
       }
+      this.bigIntsNew = newBigInts
     } else {
       console.error('Invalid yearIndex:', this.yearIndex)
     }

@@ -4,10 +4,11 @@ import 'swiper/css'
 import { backElement, frontElement, swiperData } from '@/shared/utils'
 import { useRef } from 'react'
 import { ButtonRound } from '@/shared/components'
-import { SwiperItem } from '@/entities'
 import styled from 'styled-components'
 import { observer } from 'mobx-react-lite'
 import { useStore } from '@/shared/store'
+import { SwiperItem } from '@/entities'
+import { useMediaQuery } from 'react-responsive'
 
 const Div = styled.div`
   display: flex;
@@ -26,6 +27,7 @@ const Div = styled.div`
 `
 
 export const SwiperWidget = observer(() => {
+  const isMobile = useMediaQuery({ maxWidth: 768 })
   const { clickedDot, yearIndex } = useStore()
 
   const swiperRef = useRef<SwiperType>()
@@ -37,16 +39,20 @@ export const SwiperWidget = observer(() => {
     swiperRef.current?.slideNext()
   }
 
+  const slidesPerView = isMobile ? 1.5 : 3
+
   return (
     <div>
       <Div>
-        <ButtonRound content={backElement} onClick={handlePrevClick} />
+        {!isMobile && (
+          <ButtonRound content={backElement} onClick={handlePrevClick} />
+        )}
         <Swiper
           onBeforeInit={swiper => {
             swiperRef.current = swiper
           }}
           spaceBetween={50}
-          slidesPerView={3}
+          slidesPerView={slidesPerView}
         >
           {swiperData(yearIndex, clickedDot).map((item: any) => (
             <SwiperSlide key={item.id}>
@@ -54,7 +60,9 @@ export const SwiperWidget = observer(() => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <ButtonRound content={frontElement} onClick={handleNextClick} />
+        {!isMobile && (
+          <ButtonRound content={frontElement} onClick={handleNextClick} />
+        )}
       </Div>
     </div>
   )

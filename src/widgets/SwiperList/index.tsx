@@ -11,8 +11,7 @@ const Div = styled.div`
 `
 
 export const SwiperList = observer(() => {
-  const store = useStore()
-  const { yearIndex } = store
+  const { yearIndex, setIndexIncrement, setIndexDecrement } = useStore()
 
   return (
     <div>
@@ -23,11 +22,11 @@ export const SwiperList = observer(() => {
       <Div>
         <ButtonRound
           content={backElement}
-          onClick={() => store.setIndexDecrement()}
+          onClick={() => setIndexDecrement()}
         />
         <ButtonRound
           content={frontElement}
-          onClick={() => store.setIndexIncrement()}
+          onClick={() => setIndexIncrement()}
         />
       </Div>
     </div>

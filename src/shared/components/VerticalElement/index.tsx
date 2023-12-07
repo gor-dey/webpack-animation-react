@@ -7,6 +7,10 @@ const Div = styled.div`
   height: 120px;
   width: 5px;
   margin-top: 5px;
+
+  @media (max-width: 768px) {
+    opacity: 0;
+  }
 `
 
 export const VerticalElement = () => {

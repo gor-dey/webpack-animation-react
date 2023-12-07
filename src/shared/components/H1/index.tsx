@@ -5,7 +5,11 @@ const TitleStyle = styled.div`
     color: #42567a;
     font-size: 56px;
     font-weight: 700;
-    margin-top: 1000px;
+
+    @media (max-width: 768px) {
+      font-size: 6vw;
+      margin-top: 20px;
+    }
   }
 `
 

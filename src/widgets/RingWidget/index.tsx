@@ -6,25 +6,23 @@ import gsap from 'gsap'
 import { StyleProps } from '@/shared/types'
 import { dotCount } from '@/shared/utils'
 
-export const RingWidget: React.FC<StyleProps> = observer(
-  ({ className, children }) => {
-    const { clickedDot } = useStore()
+export const RingWidget = observer(({ className, children }: StyleProps) => {
+  const { clickedDot } = useStore()
 
-    useEffect((): (() => void) => {
-      const rotationAngle = 360 - clickedDot * (360 / dotCount)
+  useEffect((): (() => void) => {
+    const rotationAngle = 360 - clickedDot * (360 / dotCount)
 
-      const rotateAnimation = gsap.to('.ring-widget', {
-        rotation: rotationAngle,
-        ease: 'power2.inOut'
-      })
+    const rotateAnimation = gsap.to('.ring-widget', {
+      rotation: rotationAngle,
+      ease: 'power2.inOut'
+    })
 
-      return () => rotateAnimation.kill()
-    }, [clickedDot])
+    return () => rotateAnimation.kill()
+  }, [clickedDot])
 
-    return (
-      <div className={`ring-widget ${className}`}>
-        <Ring className="ring">{children}</Ring>
-      </div>
-    )
-  }
-)
+  return (
+    <div className={`ring-widget ${className}`}>
+      <Ring className="ring">{children}</Ring>
+    </div>
+  )
+})

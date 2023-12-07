@@ -19,6 +19,10 @@ const Div = styled.div`
   & > span:last-child {
     color: ${pinkColor};
   }
+  @media (max-width: 768px) {
+    font-size: 15vw;
+    margin-top: 20px;
+  }
 `
 
 export const BigInts = observer(({ className, children }: StyleProps) => {

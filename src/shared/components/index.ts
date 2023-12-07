@@ -1,5 +1,5 @@
-export * from './Title'
+export * from './H1'
 export * from './VerticalElement'
 export * from './BigInts'
 export * from './Line'
-export * from './Buttons/Round'
+export * from './Buttons'

@@ -2,7 +2,7 @@ import { swiperBlueColor, darkBlueColor } from '@/shared/cssConstants'
 import styled from 'styled-components'
 
 const Div = styled.div`
-  width: 320px;
+  width: 100%;
   height: 135px;
   display: flex;
   flex-direction: column;

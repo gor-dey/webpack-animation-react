@@ -48,7 +48,6 @@ export const DotBig = styled.div`
     transform: translate(60px, 10px);
     color: ${darkBlueColor};
     font-size: 20px;
-    font-weight: 700;
   }
 `
 

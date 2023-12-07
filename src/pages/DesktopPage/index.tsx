@@ -1,9 +1,8 @@
-import { CrossLines, Ring, Title } from '@/entities'
-import { SwiperWidget } from '@/widgets'
-import { SwiperList } from '@/widgets/SwiperList'
+import { CrossLines, Title } from '@/entities'
+import { SwiperList, SwiperWidget } from '@/widgets'
 import { BigIntsPos, Div, RingPos, SwiperPos } from './style'
 
-export const MainPage = () => {
+export const DesktopPage = () => {
   return (
     <Div>
       <Title />
