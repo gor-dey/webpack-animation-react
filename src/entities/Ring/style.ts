@@ -21,8 +21,8 @@ export const DotBig = styled.div`
   box-sizing: border-box;
   padding: 5px;
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   opacity: 0;
   transition: all 0.5s ease;
 
@@ -48,6 +48,7 @@ export const DotBig = styled.div`
     transform: translate(60px, 10px);
     color: ${darkBlueColor};
     font-size: 20px;
+    font-weight: 700;
   }
 `
 

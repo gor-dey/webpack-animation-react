@@ -14,7 +14,8 @@ export const RingWidget = observer(({ className, children }: StyleProps) => {
 
     const rotateAnimation = gsap.to('.ring-widget', {
       rotation: rotationAngle,
-      ease: 'power2.inOut'
+      ease: 'power2.inOut',
+      duration: 1
     })
 
     return () => rotateAnimation.kill()

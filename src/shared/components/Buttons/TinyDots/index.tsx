@@ -7,6 +7,7 @@ const Dark = styled.div`
   width: 6px;
   border-radius: 50%;
   background-color: ${darkBlueColor};
+  cursor: pointer;
 `
 const Light = styled(Dark)`
   opacity: 0.3;
