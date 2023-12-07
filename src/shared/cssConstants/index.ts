@@ -1,4 +1,4 @@
-export const mainPadding = '100px'
+export const mainPadding = '50px'
 
 export const backgroundColor = '#fafafa'
 
