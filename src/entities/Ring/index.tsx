@@ -22,8 +22,8 @@ export const Ring = observer(({ className, children }: StyleProps) => {
           key={item.id}
           data-id={item.id}
           style={{
-            top: `calc(50% - 5px + ${y}px)`,
-            left: `calc(50% - 5px + ${x}px)`,
+            top: `calc(50% - 3px + ${y}px)`,
+            left: `calc(50% - 3px + ${x}px)`,
             transform: `rotate(${-rotationAngle}deg)`
           }}
           onClick={() => setClickedDot(item.id as DotType)}

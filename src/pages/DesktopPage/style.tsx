@@ -29,3 +29,10 @@ export const SwiperPos = styled.div`
     max-width: fit-content;
   }
 `
+
+export const Flex = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+`

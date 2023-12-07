@@ -19,6 +19,9 @@ const Div = styled.div`
   & > span:last-child {
     color: ${pinkColor};
   }
+  @media (max-width: 1440px) {
+    font-size: 15vw;
+  }
   @media (max-width: 768px) {
     font-size: 15vw;
     margin-top: 20px;

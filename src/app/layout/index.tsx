@@ -1,6 +1,7 @@
 import {
   backgroundColor,
   borderColor,
+  darkBlueColor,
   mainPadding
 } from '@/shared/cssConstants'
 import styled, { createGlobalStyle } from 'styled-components'
@@ -10,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: ${darkBlueColor}
   }
   html, body {
     height: 100%;
